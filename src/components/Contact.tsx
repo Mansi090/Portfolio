@@ -61,7 +61,7 @@ const Contact = () => {
               Designed and Developed <br /> by <span>Mansi Dixit</span>
             </h2>
             <h5>
-              
+              <MdCopyright /> 2025
             </h5>
           </div>
         </div>
