@@ -1,14 +1,12 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
-import { SplitText } from "gsap-trial/SplitText";
 
 interface ParaElement extends HTMLElement {
   anim?: gsap.core.Animation;
-  split?: SplitText;
+  split?: any; // Adjusted type since SplitText is removed
 }
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function setSplitText() {
   ScrollTrigger.config({ ignoreMobileResize: true });
@@ -26,13 +24,9 @@ export default function setSplitText() {
       para.split?.revert();
     }
 
-    para.split = new SplitText(para, {
-      type: "lines,words",
-      linesClass: "split-line",
-    });
-
+    // Removed SplitText functionality
     para.anim = gsap.fromTo(
-      para.split.words,
+      para,
       { autoAlpha: 0, y: 80 },
       {
         autoAlpha: 1,
@@ -53,12 +47,9 @@ export default function setSplitText() {
       title.anim.progress(1).kill();
       title.split?.revert();
     }
-    title.split = new SplitText(title, {
-      type: "chars,lines",
-      linesClass: "split-line",
-    });
+    // Removed SplitText functionality
     title.anim = gsap.fromTo(
-      title.split.chars,
+      title,
       { autoAlpha: 0, y: 80, rotate: 10 },
       {
         autoAlpha: 1,
