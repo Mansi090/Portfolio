@@ -6,8 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-        Passionate software developer with expertise in C++, Python, ML and web development. I enjoy solving complex problems through DSA, open-source contributions, and AI-driven projects. Currently exploring machine learning and building innovative web applications.Open Source contributor, and tech enthusiast. Always eager to learn and collaborate! 
-
+        I'm a creative coder who turns ideas into engaging digital experiences. I use C++, Python, and web development to build projects that are both reliable and beautiful. My work is about blending technology with creativity, making every project a true reflection of passion and skill.
 
         </p>
       </div>
