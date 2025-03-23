@@ -13,6 +13,7 @@ export default defineConfig({
   },
   preview: {
     host: "0.0.0.0",
+    allowedHosts: ["portfolio-a9l3.onrender.com"],
     port: Number(process.env.PORT) || 4173,
   }
 });
